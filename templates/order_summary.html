@@ -21,10 +21,18 @@
             <tr>
              <th scope="row">{{forloop.counter}}</th>
              <td>{{order_item.item.name}}</td>
-             <td>{{order_item.item.price_small}}</td>
-             <td>{{order_item.quantity}}</td>
-             <!-- get updated pirce  -->
-             <td>${{order_item.get_total_large_item_price}}</td>
+             <td>{{order_item.item.price}}</td>
+             <td>
+                <a href="{% url 'remove-single-item-from-cart' order_item.item.slug%}"><i class="fa fa-minus mr-2"></i></a>
+                  {{order_item.quantity}}
+                <a href="{% url 'add-to-cart' order_item.item.slug%}"><i class="fa fa-plus ml-2"></i></a>
+                 
+           </td>
+             <td>${{order_item.get_final_price }}
+              <a style="color:red;" href="{% url 'remove-from-cart' order_item.item.slug%}">
+                  <i class="fa fa-trash float-right"></i>
+                </a>
+              </td>
             </tr>
             {% empty %}
             <tr>
@@ -44,6 +52,11 @@
             <td colspan="4"><b>Order Total</b></td>
           <td>${{object.get_total}}</td>
 
+        </tr>
+        <tr>
+          <td colspan="5"><a class="btn btn-warning float-right ml-2" href="/checkout">Proceed to checkout </a>
+         <a class="btn btn-primary float-right" href="/">continue shoping </a></td>
+          
         </tr>
         </tbody>
     </table>

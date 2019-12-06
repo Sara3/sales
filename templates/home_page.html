@@ -24,7 +24,7 @@
 
                 <!--Card image-->
                 <div class="view overlay">
-                  <img src="https://www.qsrmagazine.com/sites/default/files/styles/story_page/public/story/red-roofs-are-haunting-pizza-huts-sales.jpg?itok=z0D4czud" class="card-img-top"
+                  <img src="{{item.url}}" class="card-img-top"
                     alt="">
                   <a>
                     <div class="mask rgba-white-slight"></div>
@@ -45,19 +45,10 @@
                     </strong>
                     <div class="grey-text"> {{item.discription}}</div>
                   </h5>
-
-                  <h4>
-                    {% if item.price_small == item.price_large %}
                       <br>
                       <strong class="font-weight-bold blue-text"> 
-                      ${{item.price_small}}</strong>
+                      ${{item.price}}</strong>
 
-                    {% else %}
-                      Small: <strong class="font-weight-bold blue-text"> ${{item.price_small}}</strong>
-                      <br>
-                      Large: <strong class="font-weight-bold blue-text">${{item.price_large}}</strong>
-                    {% endif %}
-                  </h4>
 
                 </div>
                 <!--Card content-->

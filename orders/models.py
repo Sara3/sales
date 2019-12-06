@@ -1,21 +1,24 @@
 from django.db import models
+import random
 from django.conf import settings
 from django.shortcuts import reverse
 from django.contrib.auth.models import User
 # Create your models here.
 
+def image():
+	return random.choice(urls)
 
 # menu item
 class Item(models.Model):
 	category = models.CharField(max_length=100)
 	name = models.CharField(max_length=100)
-	price_small = models.FloatField()
-	price_large = models.FloatField()
+	price = models.FloatField()
 	description = models.TextField()
+	url = models.CharField(max_length=1000)
 	slug = models.SlugField(default="test")
 
 	def __str__(self):
-		return f"{self.category} - {self.name} - {self.price_small} - {self.price_large}"
+		return f"{self.category} - {self.name} - {self.price} -  {self.description}"
 
 	def get_abs_url(self):
 		return reverse("product", kwargs={
@@ -26,11 +29,10 @@ class Item(models.Model):
 			'slug': self.slug
 			})
 
-#menu topping
-class Toppings(models.Model):
-	topping = models.CharField(max_length=100)
-	def __str__(self):
-		return self.topping
+	def get_remove_from_cart_url(self):
+		return reverse("remove-from-cart", kwargs={
+			'slug': self.slug
+			})
 
 #menu item added to the order
 class OrderItem(models.Model):
@@ -40,13 +42,8 @@ class OrderItem(models.Model):
 	quantity = models.IntegerField(default=1)
 	def __str__(self):
 		return f"{self.quantity} order of {self.item.name}"
-	def get_total_item_price(self):
-		return self.quantity * self.item.price_small
-	def get_total_large_item_price(self):
-		return self.quantity * self.item.price_large
 	def get_final_price(self):
-		if self.item.price_small:
-			return self.get_total_large_item_price()
+		return self.quantity * self.item.price
 
 # shoping card
 class Order(models.Model):

@@ -14,7 +14,7 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="https://www.qsrmagazine.com/sites/default/files/styles/story_page/public/story/red-roofs-are-haunting-pizza-huts-sales.jpg?itok=z0D4czud" class="card-img-top" class="img-fluid" alt="">
+          <img src={{object.url}} class="card-img-top" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -27,30 +27,29 @@
 
             <div class="mb-3">
               <a href="">
-                <span class="badge purple mr-1">{{object}}</span>
+                <span class="badge purple mr-1">{{object.category}}</span>
               </a>
             </div>
 
             <p class="lead">
-              {% if object.price_small == object.price_large %}
-                      <br>
-                      <strong class="font-weight-bold blue-text"> 
-                      ${{object.price_small}}</strong>
-
-                    {% else %}
-                      Small: <strong class="font-weight-bold blue-text"> ${{object.price_small}}</strong>
-                      <br>
-                      Large: <strong class="font-weight-bold blue-text">${{object.price_large}}</strong>
-                    {% endif %}
+  
+            
+                   <strong class="font-weight-bold blue-text"> ${{object.price}}</strong>
+                  
             </p>
 
-            <p class="lead font-weight-bold">Descriptionlk</p>
+            <p class="lead font-weight-bold">Description</p>
 
             <p>{{object.description}}</p>
 
              <a href="{{object.get_add_to_cart_url}}" class="btn btn-primary btn-md my-0 p">
 
                 Add to cart
+                <i class="fas fa-shopping-cart ml-1"></i>
+              </a>
+                <a href="{{object.get_remove_from_cart_url}}" class="btn btn-danger btn-md my-0 p">
+
+                remove
                 <i class="fas fa-shopping-cart ml-1"></i>
               </a>
 

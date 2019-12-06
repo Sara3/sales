@@ -1,4 +1,5 @@
 {% load static %}
+{% load cart_template_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,19 +43,7 @@
 
 
 <body>
-
-    <div class="mt-5 pt-4">
-    {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% endfor %}
-    {% endif %}
-    </div>
+   
 
       <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
@@ -83,6 +72,7 @@
             {% if request.user.is_authenticated %}
               <li class="nav-item">
                 <a href="{% url 'order-summary' %}" class="nav-link waves-effect">
+                  <span class="bdge red z-depth-1 mr-1">{{request.user | cart_item_count}}</span>
                   <i class="fas fa-shopping-cart"></i>
                   <span class="clearfix d-none d-sm-inline-block"> Cart </span>
                 </a>
@@ -125,7 +115,7 @@
 
       <!--First slide-->
       <div class="carousel-item active">
-        <div class="view" style="background-image: url('https://images.unsplash.com/photo-1559183533-ee5f4826d3db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1313&q=80'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view" style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/91UXKDjZgmL._AC_SL1500_.jpg'); background-repeat: no-repeat; background-size: cover;">
 
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
@@ -133,15 +123,15 @@
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Pizza Pizza</strong>
+                <strong>THERAPEUTIC MAGNETS</strong>
               </h1>
 
               <p>
-                <strong>Fresh</strong>
+                <strong>Soft </strong>
               </p>
 
               <p class="mb-4 d-none d-md-block">
-                <strong>Pizza Hut is an American restaurant chain and international franchise which was founded in 1958 in Wichita, Kansas by Dan and Frank Carney. </strong>
+                <strong>we have integrated eight (8) therapeutic magnets to contribute in alleviating pain by means of static field therapy. Not only does our product provide upper back support, lower back support and lumbar support, it can also soothe sore muscle joints and muscles; improve circulation and relieve stiffness and tension in as early as 30 days! </strong>
               </p>
             </div>
             <!-- Content -->
@@ -155,7 +145,7 @@
 
       <!--Second slide-->
       <div class="carousel-item">
-        <div class="view" style="background-image: url('https://images.unsplash.com/photo-1551978129-b73f45d132eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1304&q=80'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view" style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/71LYEaf9C3L._AC_SL1500_.jpg'); background-repeat: no-repeat; background-size: cover;">
 
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
@@ -163,15 +153,15 @@
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Winner of best pizza in town</strong>
+                <strong>ERGONOMIC </strong>
               </h1>
 
               <p>
-                <strong>cheap</strong>
+                <strong>elegent </strong>
               </p>
 
               <p class="mb-4 d-none d-md-block">
-                <strong>Pizza Hut is an American restaurant chain and international franchise which was founded in 1958 in Wichita, Kansas by Dan and Frank Carney. </strong>
+                <strong>Not only will you develop a straight back, strengthened shoulders and neck but you get to create good posture that will add up to your self-esteem and confidence. Experience back pain relief, lower back pain relief, neck pain relief and improvements in your overall posture with the aid of our back posture corrector. </strong>
               </p>
 
             </div>
@@ -186,7 +176,7 @@
 
       <!--Third slide-->
       <div class="carousel-item">
-        <div class="view" style="background-image: url('https://images.unsplash.com/photo-1490717064594-3bd2c4081693?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view" style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/91wNAB28U%2BL._AC_SL1500_.jpg'); background-repeat: no-repeat; background-size: cover;">
 
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
@@ -194,15 +184,15 @@
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong> best pizza in town</strong>
+                <strong> VERSATILE </strong>
               </h1>
 
               <p>
-                <strong> Italian </strong>
+                <strong> best fabric </strong>
               </p>
 
               <p class="mb-4 d-none d-md-block">
-                <strong>Pizza Hut is an American restaurant chain and international franchise which was founded in 1958 in Wichita, Kansas by Dan and Frank Carney. </strong>
+                <strong>We have constructed our back posture brace with adjustable straps fastened by a durable Velcro and sturdy buckles for a guaranteed fit for all body shapes and sizes. It can be worn in three (3) different ways and get the support that you need. Utilize it as a lumbar support, as a back straightener for your upper back support or wear it for lower back lower back pain relief. All three ways made into one (1) product. </strong>
               </p>
             </div>
             <!-- Content -->
@@ -259,6 +249,18 @@
 
       </nav>
       <!--/.Navbar-->
+       <div class="mt-5 pt-4">
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+    {% endif %}
+    </div>
     </div>
      {% block content %}
     {% endblock content %}

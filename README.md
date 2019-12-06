@@ -34,5 +34,45 @@ My personal touch is implementing Pagination and page count.
 
 
 
+==========
+
+The above are my project 3 implementtation 
+Below are my additions to project 3 for the final project 
+
+===========
+Added functionality: 
+Add to the card: 
+![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291068-e439a780-178e-11ea-968a-4aee40f772c9.png)
+
+
+Remove from the card: 
+![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291068-e439a780-178e-11ea-968a-4aee40f772c9.png)
+
+
+add messages: 
+![image](https://user-images.githubusercontent.com/6343949/70291154-3084e780-178f-11ea-9bd4-ebefb72998f5.png)
+
+add number of how many items are in the card: 
+![Screen Shot 2019-12-05 at 5 31 17 PM](https://user-images.githubusercontent.com/6343949/70291216-5ad6a500-178f-11ea-9232-bf8fddb2bab0.png)
+
+added check out button and check out form: 
+
+![Screen Shot 2019-12-05 at 6 45 39 PM](https://user-images.githubusercontent.com/6343949/70291250-73df5600-178f-11ea-8483-4c6981460a32.png)
+Added: check out form: 
+![Screen Shot 2019-12-05 at 6 47 49 PM](https://user-images.githubusercontent.com/6343949/70291362-cb7dc180-178f-11ea-98ab-fcb650baea46.png)
+
+add continue shopping route: 
+
+![Screen Shot 2019-12-05 at 6 45 39 PM](https://user-images.githubusercontent.com/6343949/70291250-73df5600-178f-11ea-8483-4c6981460a32.png)
+
+
+added buttonts to chance quentities on order  summary page: 
+![Screen Shot 2019-12-05 at 6 46 15 PM](https://user-images.githubusercontent.com/6343949/70291284-89548000-178f-11ea-97bc-9fedd7331a2d.png)
+added trash can: 
+![Screen Shot 2019-12-05 at 6 46 48 PM](https://user-images.githubusercontent.com/6343949/70291313-a0936d80-178f-11ea-9af8-f0fd1047030c.png)
+
+
+
+
 
 
