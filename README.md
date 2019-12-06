@@ -42,12 +42,11 @@ Below are my additions to project 3 for the final project
 ===========.  
 Added functionality:   
 # 1: Add to the card:    #
-![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291068-e439a780-178e-11ea-968a-4aee40f772c9.png)
+![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291852-4dbab580-1791-11ea-88f6-40297a7b02ee.png)
 
 
 # 2: Remove from the card:#   
-![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291068-e439a780-178e-11ea-968a-4aee40f772c9.png)
-
+![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291852-4dbab580-1791-11ea-88f6-40297a7b02ee.png)
 
 # 3: Add messages:  #
 ![image](https://user-images.githubusercontent.com/6343949/70291154-3084e780-178f-11ea-9bd4-ebefb72998f5.png)
