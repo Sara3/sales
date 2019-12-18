@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
 
-BASE_DIR +='/final-project-Sara3'
+BASE_DIR +='/salesInterviewProject'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
