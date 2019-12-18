@@ -1,4 +1,4 @@
-# Project 3
+
 
 I will only discribe the files I have crated/used to help with brevaty 
 > orders > views.py: has functions and classes of views 
@@ -26,20 +26,10 @@ functionality checklist:
 
 * [X]Viewing Orders: Site administrators should have access to a page where they can view any orders that have already been placed.
 
-* [X]Personal Touch: Add at least one additional feature of your choosing to the web application. Possibilities include: allowing site administrators to mark orders as complete and allowing users to see the status of their pending or completed orders, integrating with the Stripe API to allow users to actually use a credit card to make a purchase during checkout, or supporting sending users a confirmation email once their purchase is complete. If you need to use any credentials (like passwords or API credentials) for your personal touch, be sure not to store any credentials in your source code, better to use environment variables!
-
-
-
-My personal touch is implementing Pagination and page count. 
-
+* [X]Okta Auth: Add at least one additional feature of your choosing to the web application. Possibilities include: allowing site administrators to mark orders as complete and allowing users to see the status of their pending or completed orders, integrating with the Stripe API to allow users to actually use a credit card to make a purchase during checkout, or supporting sending users a confirmation email once their purchase is complete. If you need to use any credentials (like passwords or API credentials) for your personal touch, be sure not to store any credentials in your source code, better to use environment variables!
 
 
 ==========. 
-
-The above are my project 3 implementtation  
-Below are my additions to project 3 for the final project   
-
-===========.  
 Added functionality:   
 # 1: Add to the card:    #
 ![Screen Shot 2019-12-05 at 6 40 14 PM](https://user-images.githubusercontent.com/6343949/70291852-4dbab580-1791-11ea-88f6-40297a7b02ee.png)
